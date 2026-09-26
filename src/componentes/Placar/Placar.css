@@ -1,0 +1,63 @@
+.placar {
+  padding: 18px 18px 8px;
+}
+
+.placar table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.placar th {
+  padding: 0 0 8px;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: left;
+  color: var(--texto-suave);
+}
+
+.placar td {
+  padding: 7px 0;
+  border-top: 1px solid var(--borda);
+}
+
+.placar .numero {
+  text-align: right;
+  font-family: var(--fonte-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.placar__nome {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--fonte-mono);
+  font-size: 12px;
+}
+
+.placar__vencedor td {
+  font-weight: 600;
+}
+
+.estado {
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+
+.estado--explorando {
+  color: var(--texto);
+}
+
+.estado--retrocedendo {
+  color: var(--destaque);
+}
+
+.estado--chegou {
+  color: var(--sucesso);
+  font-weight: 600;
+}
+
+.estado--preso,
+.estado--semCaminho {
+  color: var(--perigo);
+}

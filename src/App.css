@@ -1,0 +1,54 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app__conteudo {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 270px 1fr 320px;
+  gap: 14px;
+  padding: 14px;
+}
+
+.app__palco,
+.app__lateral {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.app__carregando {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  color: var(--texto-suave);
+}
+
+.aviso {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--borda);
+  background: var(--superficie-2);
+  font-size: 13px;
+  color: var(--texto-suave);
+}
+
+.aviso--erro {
+  color: var(--perigo);
+}
+
+.aviso button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+}

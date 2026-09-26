@@ -1,0 +1,107 @@
+:root {
+  --fundo: #f4f3ef;
+  --superficie: #ffffff;
+  --superficie-2: #f8f7f4;
+  --borda: #e3e1da;
+  --texto: #1f2328;
+  --texto-suave: #6b6f76;
+  --destaque: #c98a12;
+  --destaque-texto: #ffffff;
+  --perigo: #d1343a;
+  --sucesso: #218358;
+
+  --lab-piso: #fbfaf7;
+  --lab-parede: #2b2f36;
+  --lab-grade: rgba(40, 44, 52, 0.14);
+  --lab-morta: rgba(40, 44, 52, 0.12);
+  --lab-contorno-rato: rgba(0, 0, 0, 0.3);
+  --lab-inalcancavel: rgba(209, 52, 58, 0.1);
+  --lab-realce: #c98a12;
+
+  --raio: 10px;
+  --raio-pequeno: 6px;
+  --sombra: 0 1px 2px rgba(20, 20, 20, 0.05), 0 2px 8px rgba(20, 20, 20, 0.04);
+  --fonte: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --fonte-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #141517;
+    --superficie: #1c1d20;
+    --superficie-2: #232428;
+    --borda: #2f3136;
+    --texto: #ececec;
+    --texto-suave: #9a9ea6;
+    --destaque: #f0b43c;
+    --destaque-texto: #1a1300;
+    --perigo: #ff6369;
+    --sucesso: #3dd68c;
+
+    --lab-piso: #1a1b1e;
+    --lab-parede: #d9d6cc;
+    --lab-grade: rgba(255, 255, 255, 0.12);
+    --lab-morta: rgba(255, 255, 255, 0.07);
+    --lab-contorno-rato: rgba(0, 0, 0, 0.45);
+    --lab-inalcancavel: rgba(255, 99, 105, 0.12);
+    --lab-realce: #f0b43c;
+
+    --sombra: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte);
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  cursor: default;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+.cartao {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.titulo-secao {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.ponto {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: none;
+}

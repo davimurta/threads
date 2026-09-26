@@ -1,0 +1,59 @@
+.painel-controle {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.painel-controle__secao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+}
+
+.painel-controle__secao + .painel-controle__secao {
+  border-top: 1px solid var(--borda);
+}
+
+.painel-controle__secao .titulo-secao {
+  margin-bottom: 0;
+}
+
+.painel-controle__acoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.painel-controle__acoes > :only-child {
+  grid-column: span 2;
+}
+
+.campo-texto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.campo-texto input {
+  width: 130px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-pequeno);
+  background: var(--superficie-2);
+  font-family: var(--fonte-mono);
+  font-size: 13px;
+  text-align: right;
+  user-select: text;
+}
+
+.campo-texto input:focus {
+  outline: 2px solid var(--destaque);
+  outline-offset: -1px;
+}
+
+.campo-texto input:disabled {
+  opacity: 0.5;
+}

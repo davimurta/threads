@@ -1,0 +1,92 @@
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--borda);
+  background: var(--superficie);
+}
+
+.cabecalho__marca h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.cabecalho__marca span {
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+
+.cabecalho__status {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cabecalho__vencedor {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.indicador {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.indicador__rotulo {
+  font-size: 11px;
+  color: var(--texto-suave);
+}
+
+.indicador__valor {
+  font-family: var(--fonte-mono);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--borda);
+  color: var(--texto-suave);
+}
+
+.selo::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.selo--rodando {
+  color: var(--sucesso);
+}
+
+.selo--rodando::before {
+  animation: pulsar 1.2s ease-in-out infinite;
+}
+
+.selo--pausada {
+  color: var(--destaque);
+}
+
+.selo--finalizada {
+  color: var(--texto);
+}
+
+@keyframes pulsar {
+  50% {
+    opacity: 0.3;
+  }
+}
